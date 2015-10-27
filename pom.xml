@@ -61,7 +61,7 @@
   <!-- profiles -->
   <profiles>
     <profile>
-      <id>local</id>
+      <id>firefox</id>
       <properties>
         <env>local</env>
         <user.username></user.username>
@@ -77,27 +77,27 @@
       </activation>
     </profile>
     <profile>
-      <id>dev</id>
+      <id>chrome</id>
       <properties>
         <env>dev</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://devhost/</site.url>
-        <browser.name>firefox</browser.name>
+        <site.url>http://localhost/</site.url>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
     </profile>
     <profile>
-      <id>test</id>
+      <id>safari</id>
       <properties>
         <env>test</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://testhost/</site.url>
-        <browser.name>firefox</browser.name>
+        <site.url>http://localhost/</site.url>
+        <browser.name>safari</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
