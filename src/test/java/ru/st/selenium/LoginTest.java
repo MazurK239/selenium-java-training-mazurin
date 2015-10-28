@@ -2,10 +2,13 @@ package ru.st.selenium;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -17,17 +20,20 @@ public class LoginTest extends TestBase {
   @Test
   public void testLogin() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin1");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin1");
-    driver.findElement(By.name("submit")).click();
+    WebElement usernameField = driver.findElement(By.id("username"));
+    WebElement passwordField = driver.findElement(By.name("password"));
+    WebElement button = driver.findElement(By.name("submit"));
+	usernameField.clear();
+    usernameField.sendKeys("admin1");
+	passwordField.clear();
+    passwordField.sendKeys("admin1");
+	button.click();
     assertTrue(isElementPresent(By.xpath("//td[@class='error'][contains(text(), 'Incorrect user name or password')]")));
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
-    driver.findElement(By.name("submit")).click();
+    usernameField.clear();
+    usernameField.sendKeys("admin");
+    passwordField.clear();
+    passwordField.sendKeys("admin");
+    button.click();
   }
 
   private boolean isElementPresent(By by) {
