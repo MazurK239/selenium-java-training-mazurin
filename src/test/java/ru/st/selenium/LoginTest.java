@@ -15,8 +15,14 @@ public class LoginTest extends TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Test
-  public void testUntitled() throws Exception {
+  public void testLogin() throws Exception {
     driver.get(baseUrl + "/php4dvd/");
+    driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).sendKeys("admin1");
+    driver.findElement(By.name("password")).clear();
+    driver.findElement(By.name("password")).sendKeys("admin1");
+    driver.findElement(By.name("submit")).click();
+    assertTrue(isElementPresent(By.xpath("//td[@class='error'][contains(text(), 'Incorrect user name or password')]")));
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
     driver.findElement(By.name("password")).clear();
