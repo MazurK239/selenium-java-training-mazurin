@@ -10,7 +10,8 @@
           <include name="init"/>
           <include name="addCorrectDescription"/>
           <include name="addIncorrectDescription"/>
-          <include name="openHomePage"/>
+          <include name="noResultsSearch"/>
+          <include name="successfulSearch"/>
           <include name="removeDescription"/>
           <include name="tearDown"/>
         </methods>
