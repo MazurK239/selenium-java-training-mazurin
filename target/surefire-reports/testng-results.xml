@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="4711" started-at="2015-10-28T18:15:42Z" finished-at="2015-10-28T18:15:47Z">
+  <suite name="Tests" duration-ms="11034" started-at="2015-11-04T15:52:44Z" finished-at="2015-11-04T15:52:55Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="4711" started-at="2015-10-28T18:15:42Z" finished-at="2015-10-28T18:15:47Z">
-      <class name="ru.st.selenium.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:ru.st.selenium.LoginTest@5b464ce8]" name="init" is-config="true" duration-ms="2383" started-at="2015-10-28T21:15:42Z" finished-at="2015-10-28T21:15:44Z">
+    <test name="Test1" duration-ms="11034" started-at="2015-11-04T15:52:44Z" finished-at="2015-11-04T15:52:55Z">
+      <class name="ru.st.selenium.SmokeTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="init" is-config="true" duration-ms="5009" started-at="2015-11-04T18:52:44Z" finished-at="2015-11-04T18:52:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:ru.st.selenium.LoginTest@5b464ce8]" name="testLogin" duration-ms="2305" started-at="2015-10-28T21:15:44Z" finished-at="2015-10-28T21:15:47Z">
+        <test-method status="PASS" signature="openHomePage()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="openHomePage" is-config="true" duration-ms="1340" started-at="2015-11-04T18:52:49Z" finished-at="2015-11-04T18:52:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.st.selenium.LoginTest@5b464ce8]" name="tearDown" is-config="true" duration-ms="648" started-at="2015-10-28T21:15:47Z" finished-at="2015-10-28T21:15:47Z">
+        </test-method> <!-- openHomePage -->
+        <test-method status="PASS" signature="addIncorrectDescription()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="addIncorrectDescription" duration-ms="1200" started-at="2015-11-04T18:52:50Z" finished-at="2015-11-04T18:52:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addIncorrectDescription -->
+        <test-method status="PASS" signature="addCorrectDescription()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="addCorrectDescription" duration-ms="1670" started-at="2015-11-04T18:52:52Z" finished-at="2015-11-04T18:52:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCorrectDescription -->
+        <test-method status="PASS" signature="removeDescription()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="removeDescription" duration-ms="1776" started-at="2015-11-04T18:52:53Z" finished-at="2015-11-04T18:52:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeDescription -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.st.selenium.SmokeTest@5b464ce8]" name="tearDown" is-config="true" duration-ms="188" started-at="2015-11-04T18:52:55Z" finished-at="2015-11-04T18:52:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- ru.st.selenium.LoginTest -->
+      </class> <!-- ru.st.selenium.SmokeTest -->
     </test> <!-- Test1 -->
   </suite> <!-- Tests -->
 </testng-results>

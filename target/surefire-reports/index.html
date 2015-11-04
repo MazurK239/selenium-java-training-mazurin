@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,17 @@
                     <div class="method-list-content passed suite-Tests">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.LoginTest" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.SmokeTest" hash-for-method="addCorrectDescription">addCorrectDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.SmokeTest" hash-for-method="addIncorrectDescription">addIncorrectDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.SmokeTest" hash-for-method="removeDescription">removeDescription</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Tests -->
@@ -119,14 +129,28 @@
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">ru.st.selenium.LoginTest</span>
+              <span class="class-name">ru.st.selenium.SmokeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin">
-                  </a> <!-- testLogin -->
-                  <span class="method-name">testLogin</span>
+                  <a name="addCorrectDescription">
+                  </a> <!-- addCorrectDescription -->
+                  <span class="method-name">addCorrectDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addIncorrectDescription">
+                  </a> <!-- addIncorrectDescription -->
+                  <span class="method-name">addIncorrectDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeDescription">
+                  </a> <!-- removeDescription -->
+                  <span class="method-name">removeDescription</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +158,7 @@
         </div> <!-- panel Tests -->
         <div panel-name="test-xml-Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/Konstantin_Mazurin/Documents/Selenium-training-2015/project/selenium-java-training-mazurin/src/test/resources/testng.xml</span>
+            <span class="header-content">/Users/Konstantin_Mazurin/Documents/Trainings/Selenium-training-2015/project/selenium-java-training-mazurin/src/test/resources/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +168,7 @@
   &lt;test name=&quot;Test1&quot;&gt;
     &lt;parameter name=&quot;path&quot; value=&quot;/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;ru.st.selenium.LoginTest&quot;/&gt;
+      &lt;class name=&quot;ru.st.selenium.SmokeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Tests --&gt;
@@ -184,16 +208,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogin')
-data.setCell(0, 2, 'ru.st.selenium.LoginTest')
-data.setCell(0, 3, 2305);
+data.setCell(0, 1, 'removeDescription')
+data.setCell(0, 2, 'ru.st.selenium.SmokeTest')
+data.setCell(0, 3, 1776);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addCorrectDescription')
+data.setCell(1, 2, 'ru.st.selenium.SmokeTest')
+data.setCell(1, 3, 1670);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addIncorrectDescription')
+data.setCell(2, 2, 'ru.st.selenium.SmokeTest')
+data.setCell(2, 3, 1200);
 window.suiteTableData['Tests']= { tableData: data, tableDiv: 'times-div-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Tests">
               </div> <!-- times-div-Tests -->
             </div> <!-- times-div -->
@@ -219,18 +251,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">ru.st.selenium.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ru.st.selenium.SmokeTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">openHomePage</span>
+                <span class="method-start">5009 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testLogin</span>
-                <span class="method-start">2386 ms</span>
+                <span class="method-name">addIncorrectDescription</span>
+                <span class="method-start">6353 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addCorrectDescription</span>
+                <span class="method-start">7565 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">removeDescription</span>
+                <span class="method-start">9236 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4720 ms</span>
+                <span class="method-start">11091 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

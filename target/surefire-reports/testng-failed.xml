@@ -5,13 +5,16 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="ru.st.selenium.LoginTest">
+      <class name="ru.st.selenium.SmokeTest">
         <methods>
           <include name="init"/>
-          <include name="testUntitled"/>
+          <include name="addCorrectDescription"/>
+          <include name="addIncorrectDescription"/>
+          <include name="openHomePage"/>
+          <include name="removeDescription"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- ru.st.selenium.LoginTest -->
+      </class> <!-- ru.st.selenium.SmokeTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

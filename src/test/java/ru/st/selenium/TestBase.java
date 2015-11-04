@@ -41,7 +41,7 @@ public class TestBase {
 		} else {
 			driver = WebDriverFactory.getDriver(capabilities);
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	@AfterSuite(alwaysRun = true)
