@@ -71,8 +71,16 @@ public class SmokeTest extends TestBase {
 		List<WebElement> titles = driver.findElements(By.xpath("//div[@class='movie_box']/div[@class='title']"));
 		String title = titles.get(titles.size()-1).getText();
 		driver.findElement(By.id("q")).sendKeys(title + Keys.ENTER);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.className("movie_box")));
-		assertTrue(isElementPresent(By.xpath("//div[@class='movie_box']/div[@class='title'][contains(text(), '" + title + "')]")));
+		wait.until(ExpectedConditions.urlContains("search"));
+		assertTrue(isElementPresent(By.className("movie_box")));
+		List<WebElement> newTitles = driver.findElements(By.xpath("//div[@class='movie_box']/div[@class='title']"));
+		for (WebElement newTitle : newTitles) {
+			String titleText = newTitle.getText();
+			newTitle.click();
+			String outline = driver.findElement(By.xpath("//div[@class='plotoutline']/div")).getText();
+			driver.navigate().back();
+			assertTrue(titleText.contains(title) || outline.contains(title));
+		}
 		driver.findElement(By.id("q")).clear();
 		driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
 	}
